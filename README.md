@@ -1,5 +1,7 @@
 # RaspRobot
-赋予树莓派3B机器人车语音识别控制和对象检测的控制程序。Control program of speech recog., obj. detection and motion for robot on Raspberry Pi Model 3B.
+赋予树莓派3B机器人车语音识别控制和对象检测的控制程序。
+
+Control program of speech recog., obj. detection and motion for robot on Raspberry Pi Model 3B.
 
 ## 使用硬件
 * 树莓派 3B
@@ -19,9 +21,9 @@ python main.py
 
 # More About RaspRobot
 
-本项目为 东北大学软件学院 智能驾驶技术 课程（英语课程）的内容之一。 
+本项目为东北大学软件学院智能驾驶技术课程（英语课程）的实践内容之一。 
 
-This project is for the course **Inteilligent Driving Tech.** of Northeastern University (China).
+This project is for the course **Intelligent Driving Tech.** of Software College, Northeastern University (China).
 
 ## Introduction 
 I have implemented a small 4-wheel vehicle with a simple autonomous driving system including an ultra-sonic, an infrared distance sensor, camera for object detection, a Movidius Neural Compute Stick VPU accelerator and a Raspberry Pi for program control.
