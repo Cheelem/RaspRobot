@@ -40,7 +40,7 @@ For this part, the vehicle process the input from the ultra-sonic sensor and the
 ## Object Detection 
 In this part, I use the MobileNet-SSD as the deep learning model to handle the object detection problem. The MobileNet is a light weight base network proposed by google, which uses depth-wise separable convolution to calculate traditional convolution separately, counting down the calculation difficulty for devices with less computation ability like mobile devices. And SSD is a kind of learning-based object detection model we have learnt from the class. For this vehicle, the performance of Raspberry Pi is too weak to directly run the object detection model in an acceptable speed. So I use the Movidius Neural Compute Stick to accelerate it.  To make the deep learning model run on the Neural Compute Stick, I converted the model from Caffe (a deep-learning framework) weights to the NCS graph using NCS SDK provided by Movidius. After that, I can directly inference the model on the compute stick. 
  
-## Build Up All Thing Together 
+## Build Up All Things Together 
 As the vehicle control program has 2 parts, the vehicle control and the object detection, I 
 wrote the control program in multi-thread. One thread is responsible for the vehicle control (control the GPIO voltage level, the PWM cycle, etc.) and the other thread is responsible for the object detection by calling the compute stick. 
 
@@ -52,7 +52,7 @@ wrote the control program in multi-thread. One thread is responsible for the veh
  
 When the object detection thread detected the “car” object, it will notify the vehicle control system via a message queue. So that the vehicle control will control the vehicle to “change the lane” from the left. 
  
-## Breif Slides 
+## Brief Slides Intro.
 
  <div align="center">
  <img src="https://github.com/Cheelem/RaspRobot/blob/master/images/IDT-1.png" width="700px" >
@@ -62,6 +62,6 @@ When the object detection thread detected the “car” object, it will notify t
  <img src="https://github.com/Cheelem/RaspRobot/blob/master/images/IDT-5.png" width="700px" >
  </div>
 
-## 开源协定
+## Lisence
 
 本项目遵循 MIT 开源协定之规定。
